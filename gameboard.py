@@ -26,4 +26,10 @@ class gameboards:
             print (f"So we have {player1.name} and {player2.name} playing today.  Well, let's get started.")
             while player1 < 2 and player2 < 2:
                 
+                player1_selection = input (f'{player1.name} please make a selection based off the options given above. ')
+                player2_selection = input (f'{player2.name} please make a selection based off the options given above. ')
+                if player1_selection == player2_selection:
+                    print ('There are no winners or losers.  Sheldon, stop pouting.  You get to try again.')
+                if player1_selection or player2_selection == gesture_options [1] and player1_selection or player2_selection == gesture_options  
+
     
