@@ -3,10 +3,6 @@
 from player import Player
 from ai import AI
 
-player1= Player()
-player2= Player()
-player3 = AI()
-
 
 class gameboards:
     def __init__ (self):
@@ -15,10 +11,19 @@ class gameboards:
     def competition(self):
         quantity = input ('How many players will there be, 1 or 2? ')
         gesture_options = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
-        print (gesture_options)
-        if quantity == 1:
-            pass
 
-        if quantity == 2:
+        if quantity == ('1'):
+            print (gesture_options)
+            player1= Player(input ('Please type your name '))
+            player2 = AI()
+            print (f"So we have {player1.name} and {player2.name} playing today.  Well, let's get started.")
+        
+
+        if quantity == ('2'):
+            print (gesture_options)
+            player1= Player(input ('Please type your name '))
+            player2= Player(input ('Please type your name '))
+            print (f"So we have {player1.name} and {player2.name} playing today.  Well, let's get started.")
             while player1 < 2 and player2 < 2:
-                pass
+                
+    
