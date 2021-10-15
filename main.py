@@ -18,4 +18,5 @@ else:
 
 gesture_options = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
 
-if user_input.upper != index(gesture_options).upper
+if user_input not in gesture_options:
+    
