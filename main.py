@@ -1,1 +1,2 @@
-This is the start to our first group project
+#variable definitions
+gesture_options = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
