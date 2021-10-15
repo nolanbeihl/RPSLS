@@ -4,6 +4,6 @@ class Player:
     def __init__(self):
         self.name = ''
 
-    def choice(self):
-        print(gesture_options)
-        self = input('Which gesture do you choose?: ')
+    # def choice(self):
+    #     print(gesture_options)
+    #     self = input('Which gesture do you choose?: ')
