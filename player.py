@@ -6,5 +6,5 @@ class Player:
         self.score = 0
 
     def gesture_choice(self):
-        print(gesture_options)
+        # print(gesture_options)
         self = input('Which gesture do you choose?: ')

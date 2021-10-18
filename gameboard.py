@@ -1,7 +1,3 @@
-
-
-from random import choice
-#from compare import Compare
 from player import Player
 from ai import AI
 
@@ -14,20 +10,13 @@ class Gameboards:
         self.player1 = None
         self.player2 = None
         self.playerAI = None
-
-    # class Compare():
-    # def __init__(self):
-    #     self.compare = ''
         
     def comparison( self, player1_selection, player2_selection, ):
-        # player1_score = 0
-        # player2_score = 0
-        
-        # while player1_score < (2) and player2_score < (2):
             
         if player1_selection.upper() == player2_selection.upper():
-                    print ('There are no winners or losers.  Sheldon, stop pouting.  You get to try again.')
-
+            print ('There are no winners or losers.  Sheldon, stop pouting.  You get to try again.')
+        
+        # if player1_selection.upper() != 
         elif player1_selection.upper()  == ('ROCK'):
             if player2_selection.upper() == ('SCISSORS'):
                 print (f'{self.player1.name} wins because rock crushes scissors')
@@ -38,16 +27,12 @@ class Gameboards:
             elif player2_selection.upper() == ('SPOCK'):
                 print (f'{self.player2.name} wins because Spock vaporizes rock.')
                 self.player2.score += 1
-            elif player2_selection.upper == 'LIZARD':
+            elif player2_selection.upper() == 'LIZARD':
                 print (f'{self.player1.name} wins because Rock crushes Lizard.')
                 self.player1.score += 1
             else:
                 print('You did not make a valid choice')
                 
-
-        # else:
-                #print('There are no winners this round')
-
         elif player1_selection.upper() == ('PAPER'):
             if player2_selection.upper == ('SCISSORS'):
                 print (f'{self.player2.name} wins because scissors cut paper.')
@@ -112,49 +97,30 @@ class Gameboards:
             else:
                 print('There are no winners this round')
 
-    def competition(self):
-        
-        # player1_score = 0
-        # player2_score = 0
+    def competition(self):       
         quantity = input ('How many players will there be, 1 or 2? ')
         gesture_options = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
 
-        
-
         if quantity == ('1'):
-            print (gesture_options)
             self.player1= Player(0) 
             self.player2 = AI()
             print (f"So we have {self.player1.name} and {self.player2.name} competing for a spot on the couch today.  Well, let's get started.")
             while self.player1.score < (2) and self.player2.score < (2):
+                print (f'Here are your options: {gesture_options}')
                 player1_selection = input (f'{self.player1.name} please make a selection based off the options given above. ')
                 player2_selection = self.player2.gesture_choice()
                 self.comparison(player1_selection, player2_selection)
-                # if (player1_selection).upper() == (player2_selection).upper():
-                #     print ('There are no winners or losers.  Sheldon, stop pouting.  You get to try again.')   
-                # else:         
-                #     self.comparison(player1_selection, player2_selection)
-
-        # if self.player1.score == 2:
-        #     print (f'{self.player1.name} won.  {self.player1.name} gets the couch.')
-        # if self.player2.score == 2:
-        #     print (f'{self.player2.name} won.  {self.player2.name} gets the couch.')
-                
-
+            
         if quantity == ('2'):
             print (gesture_options)
             self.player1= Player(0)
             self.player2= Player(0)
             print (f"So we have {self.player1.name} and {self.player2.name} competing for a spot on the couch.  Well, let's get started.")
             while self.player1.score < (2) and self.player2.score < (2): 
+                print (f'Here are your options: {gesture_options}')
                 player1_selection = input (f'{self.player1.name} please make a selection based off the options given above. ')
                 player2_selection = input (f'{self.player2.name} please make a selection based off the options given above. ')
-                # if player1_selection.upper() == player2_selection.upper():
-                #     print ('There are no winners or losers.  Sheldon, stop pouting.  You get to try again.')
-                    
-                # break
-                    
-                #     # self.comparison(player1_selection, player2_selection)
+                self.comparison(player1_selection, player2_selection)
                 
         if self.player1.score == 2:
             print (f'{self.player1.name} won.  {self.player1.name} gets the couch.')
