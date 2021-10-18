@@ -1,5 +1,8 @@
-from gameboard import Gameboards
-Gameboards()
+# from player import Player
+# from ai import AI
+
+# Player()
+# AI()
 
 # pick = ''
 # Player.choice(pick)
@@ -16,5 +19,10 @@ Gameboards()
 # gesture_options = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
 
 # if user_input not in gesture_options:
+    
 
-Gameboards.competition()
+from gameboard import Gameboards
+
+
+something = Gameboards()
+something.competition()
