@@ -16,20 +16,21 @@ class gameboards:
             print (gesture_options)
             player1= Player(input ('Please type your name '))
             player2 = AI()
-            print (f"So we have {player1.name} and {player2.name} playing today.  Well, let's get started.")
+            print (f"So we have {player1.name} and {player2.name} competing for a spot on the couch today.  Well, let's get started.")
         
 
         if quantity == ('2'):
             print (gesture_options)
             player1= Player(input ('Please type your name '))
             player2= Player(input ('Please type your name '))
-            print (f"So we have {player1.name} and {player2.name} playing today.  Well, let's get started.")
+            print (f"So we have {player1.name} and {player2.name} competing for a spot on the couch.  Well, let's get started.")
             while player1 < 2 and player2 < 2:
                 
                 player1_selection = input (f'{player1.name} please make a selection based off the options given above. ')
                 player2_selection = input (f'{player2.name} please make a selection based off the options given above. ')
                 if player1_selection == player2_selection:
                     print ('There are no winners or losers.  Sheldon, stop pouting.  You get to try again.')
-                if player1_selection or player2_selection == gesture_options [1] and player1_selection or player2_selection == gesture_options  
+                if player1_selection or player2_selection == gesture_options [0] and player1_selection or player2_selection == gesture_options [2]:
+                    
 
     
