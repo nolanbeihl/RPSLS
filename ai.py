@@ -4,7 +4,7 @@ import random
 gesture_options = ['1) Rock', '2) Paper', '3) Scissors', '4) Lizard', '5) Spock']
 
 class AI(Player):
-    gesture_options = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
+    #gesture_options = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
     def __init__(self):
         self.name = 'Hal'
         self.score = 0
