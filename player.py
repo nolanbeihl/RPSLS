@@ -1,8 +1,8 @@
 gesture_options = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
 
 class Player:
-    def __init__(self):
-        self.name = input('What is your name?: ')
+    def __init__(self, score):
+        self.name = input('Please enter your name:')
         self.score = 0
 
     def choice(self):

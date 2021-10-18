@@ -1,14 +1,16 @@
+
 from player import Player
 import random
 
-gesture_options = ['1) Rock', '2) Paper', '3) Scissors', '4) Lizard', '5) Spock']
+gesture_options = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
 
-class AI(Player):
-    #gesture_options = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
+class AI:
+    gesture_options = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
     def __init__(self):
         self.name = 'Hal'
         self.score = 0
 
     def choice(self):
-        self = random.choice(gesture_options)
-        print(f'Hal chose {self}')
+        #self.ai_choice
+        ai_choice = random.choice(gesture_options)
+        print(f'Hal chose {ai_choice}')
