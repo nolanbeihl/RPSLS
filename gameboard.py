@@ -4,10 +4,7 @@ from random import choice
 #from compare import Compare
 from player import Player
 from ai import AI
-from compared import Compared
-Player()
-AI()
-Compared()
+
 
 class Gameboards:
     
