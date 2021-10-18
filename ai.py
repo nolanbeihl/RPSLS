@@ -4,11 +4,14 @@ from random import choice
 
 gesture_options = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
 
-class AI:
+class AI(Player):
     gesture_options = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
     def __init__(self):
         self.name = 'Hal'
         self.score = 0
 
-    def ChooseAI(self, gesture_choice):
-        self = None
+    def gesture_choice(self):
+        self = choice(gesture_options)
+        print(f'Hal chose {self}') 
+        return self
+
