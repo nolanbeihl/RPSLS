@@ -1,5 +1,6 @@
 from player import Player
 from gameboard import Gameboards
+Gameboards.competition()
 
 
 class Compare():
