@@ -8,8 +8,6 @@ class Gameboards:
         self.player1 = None
         self.player2 = None  
         self.playerAI = None
-
-    # self.y = Gestures() 
                   
     def comparison(self, player1_selection, player2_selection):
         gesture_options = ['ROCK', 'PAPER', 'SCISSORS', 'LIZARD', 'SPOCK']
