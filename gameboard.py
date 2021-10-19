@@ -37,7 +37,7 @@ class Gameboards:
             elif player2_selection.upper() == ('SPOCK'):
                 print (f'{self.player1.name} wins because paper disproves Spock.')
                 self.player1.score += 1
-            elif player2_selection.upper() == 'LIZARD':
+            elif player2_selection.upper() == ('LIZARD'):
                 print (f'{self.player2.name} wins because lizard eats paper.')
                 self.player2.score += 1
             else:
@@ -98,33 +98,20 @@ class Gameboards:
         if quantity == ('1'):
             self.player1= Player(0) 
             self.player2 = AI()
-            print (f"So we have {self.player1.name} and {self.player2.name} competing for a spot on the couch today.  Well, let's get started.")
-            while self.player1.score < (2) and self.player2.score < (2):
-                print (f'Here are your options: {gesture_options}')
-                player1_selection = input (f'{self.player1.name} please make a selection based off the options given above. ')
-                player2_selection = self.player2.gesture_choice()
-                if player1_selection.upper() in gesture_options:
-                    self.comparison(player1_selection, player2_selection)
-                else:
-                    continue
-
-        if quantity == ('2'):
-            print (gesture_options)
-            self.player1= Player(0)
-            self.player2= Player(0)
-            print (f"So we have {self.player1.name} and {self.player2.name} competing for a spot on the couch.  Well, let's get started.")
-            while self.player1.score < (2) and self.player2.score < (2): 
-                print (f'Here are your options: {gesture_options}')
-                player1_selection = input (f'{self.player1.name} please make a selection based off the options given above. ')
-                player2_selection = input (f'{self.player2.name} please make a selection based off the options given above. ')
-                if player1_selection.upper() and player2_selection.upper() in gesture_options():
-                    self.comparison(player1_selection, player2_selection)
-                else:
-                    continue
+        elif quantity == ('2'):
+            self.player1 = Player(0) 
+            self.player2 = Player(0)
+        print (f"So we have {self.player1.name} and {self.player2.name} competing for a spot on the couch today.  Well, let's get started.")
+        while self.player1.score < (2) and self.player2.score < (2):
+            print (f'Here are your options: {gesture_options}')
+            player1_selection = (self.player1.gesture_choice())
+            player2_selection = (self.player2.gesture_choice())
+            if player1_selection.upper() and player2_selection.upper() in gesture_options:
+                self.comparison(player1_selection, player2_selection)
 
         if self.player1.score == 2:
             print (f'{self.player1.name} won.  {self.player1.name} gets the couch.')
-        if self.player2.score == 2:
+        else:
             print (f'{self.player2.name} won.  {self.player2.name} gets the couch.')
                     
                 
