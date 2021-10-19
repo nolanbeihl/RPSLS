@@ -21,11 +21,10 @@ class Gameboards:
             elif player2_selection.upper() == ('SPOCK'):
                 print (f'{self.player2.name} wins because Spock vaporizes rock.')
                 self.player2.score += 1
-            elif player2_selection.upper() == ('LIZARD'):
+            else:
+                player2_selection.upper() == ('LIZARD')
                 print (f'{self.player1.name} wins because Rock crushes Lizard.')
                 self.player1.score += 1
-            else:
-                print('You did not make a valid choice')
                 
         elif player1_selection.upper() == ('PAPER'):
             if player2_selection.upper == ('SCISSORS'):
@@ -37,11 +36,10 @@ class Gameboards:
             elif player2_selection.upper() == ('SPOCK'):
                 print (f'{self.player1.name} wins because paper disproves Spock.')
                 self.player1.score += 1
-            elif player2_selection.upper() == ('LIZARD'):
+            else:
+                player2_selection.upper() == ('LIZARD')
                 print (f'{self.player2.name} wins because lizard eats paper.')
                 self.player2.score += 1
-            else:
-                print('There are no winners this round')
 
         elif player1_selection.upper() == ('SCISSORS'):
             if player2_selection.upper() == ('PAPER'):
@@ -53,11 +51,10 @@ class Gameboards:
             elif player2_selection.upper() == ('LIZARD'):
                 print (f'{self.player1.name} wins because scissors decapitate lizard.')
                 self.player1.score += 1
-            elif player2_selection.upper() == ('SPOCK'):
+            else:
+                player2_selection.upper() == ('SPOCK')
                 print (f'{self.player2.name} wins because Spock smashes scissors.')
                 self.player2.score += 1
-            else:
-                print('There are no winners this round')
 
         elif player1_selection.upper() == ('LIZARD'):
             if player2_selection.upper() == ('ROCK'):
@@ -69,12 +66,11 @@ class Gameboards:
             elif player2_selection.upper() == ('SCISSORS'):
                 print(f'{self.player2.name} wins because Scissors decapitates Lizard')
                 self.player2.score += 1
-            elif player2_selection.upper() == ('SPOCK'):
+            else:
+                player2_selection.upper() == ('SPOCK')
                 print(f'{self.player1.name} wins because Lizard poisons Spock')
                 self.player1.score += 1
-            else:
-                print('There are no winners this round')
-
+            
         elif player1_selection.upper() == ('SPOCK'):
             if player2_selection.upper() == ('ROCK'):
                 print(f'{self.player1.name} wins because Spock vaporized Rock')
@@ -85,11 +81,10 @@ class Gameboards:
             elif player2_selection.upper() == ('SCISSORS'):
                 print(f'{self.player1.name} wins because Spock smashes Scissors')
                 self.player1.score += 1
-            elif  player2_selection.upper() == ('LIZARD'):
+            else:
+                player2_selection.upper() == ('LIZARD')
                 print(f'{self.player2.name} wins because Lizard poisons Spock')
                 self.player2.score += 1
-            else:
-                print('There are no winners this round')
 
     def competition(self):       
         quantity = input ('How many players will there be, 1 or 2? ')
@@ -108,7 +103,8 @@ class Gameboards:
             player2_selection = (self.player2.gesture_choice())
             if player1_selection.upper() and player2_selection.upper() in gesture_options:
                 self.comparison(player1_selection, player2_selection)
-
+            else:
+                print('One of you did not make a valid choice, please try again')
         if self.player1.score == 2:
             print (f'{self.player1.name} won.  {self.player1.name} gets the couch.')
         else:
